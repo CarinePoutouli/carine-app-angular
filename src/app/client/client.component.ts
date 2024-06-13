@@ -38,7 +38,6 @@ export class ClientComponent implements OnInit {
       'client/js/jquery.min.js',
       'client/js/popper.min.js',
       'client/js/bootstrap.bundle.min.js',
-      'client/js/jquery-3.0.0.min.js',
       'client/js/plugin.js',
       'client/js/jquery.mCustomScrollbar.concat.min.js',
       'client/js/custom.js'
