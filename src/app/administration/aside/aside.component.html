@@ -4,7 +4,7 @@
   <ul class="sidebar-nav" id="sidebar-nav">
 
     <li class="nav-item">
-      <a class="nav-link collapsed" href="index.html">
+      <a class="nav-link collapsed" >
         <i class="bi bi-grid"></i>
         <span>Dashboard</span>
       </a>
@@ -21,32 +21,19 @@
           </a>
         </li>
         <li>
-          <a >
+          <a type="button" data-bs-toggle="modal" data-bs-target="#addcar" >
             <i class="bi bi-circle"></i><span>Add</span>
           </a>
         </li>
 
       </ul>
-    </li><!-- End Components Nav -->
+    </li><!-- End Car Nav -->
 
     <li class="nav-item">
-      <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-        <i class="fa-solid fa-ticket"></i><span>Reservation</span><i class="bi bi-chevron-down ms-auto"></i>
+      <a routerLink="res-list" class="nav-link collapsed"  >
+        <i class="fa-solid fa-ticket"></i><span>Reservation</span>
       </a>
-      <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-        <li>
-          <a routerLink="res-list">
-            <i class="bi bi-circle"></i><span>Reservation List</span>
-          </a>
-        </li>
-        <li>
-          <a >
-            <i class="bi bi-circle"></i><span>Add</span>
-          </a>
-        </li>
-
-      </ul>
-    </li><!-- End Forms Nav -->
+    </li><!-- End Reservation Nav -->
 
 
     <li class="nav-heading">Pages</li>

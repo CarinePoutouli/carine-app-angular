@@ -7,32 +7,16 @@ import {CarService} from "../Service/car/car.service";
   styleUrl: './administration.component.css'
 })
 export class AdministrationComponent implements OnInit {
-  cars: any = [];
+
 
   constructor(
     private renderer: Renderer2,
-    private carservice: CarService,
   ) {
   }
 
   ngOnInit(): void {
     this.loadScripts();
     this.loadStyles();
-    this.getCars();
-  }
-
-  getCars() {
-    setTimeout(() => {
-      this.carservice.getAllCars().subscribe(
-        (res: any) => {
-          console.log(res);
-          this.cars = res;
-        },
-        (error: any) => {
-          console.log(error);
-        }
-      )
-    }, 2000);
   }
 
   loadStyles() {
