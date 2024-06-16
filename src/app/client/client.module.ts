@@ -18,23 +18,27 @@ import {Button} from "primeng/button";
 
 
 @NgModule({
-  declarations: [
-    ClientComponent,
+    declarations: [
+        ClientComponent,
+        HeaderComponent,
+        BannerComponent,
+        SearchComponent,
+        GalleryComponent,
+        FooterComponent,
+        ComponenentComponent,
+        HomeComponent,
+        ContactComponent,
+        AboutComponent
+    ],
+  exports: [
     HeaderComponent,
-    BannerComponent,
-    SearchComponent,
-    GalleryComponent,
-    FooterComponent,
-    ComponenentComponent,
-    HomeComponent,
-    ContactComponent,
-    AboutComponent
+    FooterComponent
   ],
-  imports: [
-    CommonModule,
-    ClientRoutingModule,
-    DialogModule,
-    Button
-  ]
+    imports: [
+        CommonModule,
+        ClientRoutingModule,
+        DialogModule,
+        Button
+    ]
 })
 export class ClientModule { }
