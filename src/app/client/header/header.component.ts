@@ -11,30 +11,11 @@ export class HeaderComponent implements OnInit{
 
   constructor(
     private Store: StoreService,
-    private loginservice: LoginService
   ) {
   }
 
     ngOnInit(): void {
-      console.log(this.Store.decodeToken())
-      console.log(this.Store.isExpire())
-
-      this.getalluser()
     }
 
-    getalluser(){
-    setTimeout(
-      () => {
-        this.loginservice.getalluser().subscribe(
-          (res: any) => {
-            console.log(res);
 
-          },
-          (error: any) => {
-            console.log(error);
-          }
-        );
-      }, 2000
-    )
-    }
 }

@@ -4,7 +4,7 @@ import {FormBuilder, Validators} from "@angular/forms";
 import {environment} from "../../../environments/environment";
 
 
-const BASE = environment.APIURL+`api`;
+const BASE = environment.APIURL;
 
 @Injectable({
   providedIn: 'root'
@@ -26,12 +26,13 @@ export class LoginService {
     prenom: ['', Validators.required],
     username: ['', Validators.required],
     password: ['', Validators.required],
+    telephone: ['', Validators.required],
     email: ['', Validators.required]
   });
 
 
   login(data: any) {
-    return this.http.post(BASE+`/login`, data);
+    return this.http.post(BASE+`/login/`, data);
   }
 
   register(data: any) {

@@ -33,16 +33,16 @@ export class LoginComponent implements OnInit {
 
   OnSubmit() {
     let objet = {
-      username: this.form.value.username,
-      password: this.form.value.password
+      "username": this.form.value.username,
+      "password": this.form.value.password
     }
-    console.log(objet);
+    console.log(JSON.parse(JSON.stringify(objet)));
     setTimeout(
 () => {
-      this.loginService.login(objet).subscribe(
+      this.loginService.login(JSON.parse(JSON.stringify(objet))).subscribe(
         (res: any) => {
           console.log(res);
-          localStorage.setItem('token', res.access_token);
+          localStorage.setItem('token', res.token);
           this.router.navigate(['/client']);
         },
         (error: any) => {

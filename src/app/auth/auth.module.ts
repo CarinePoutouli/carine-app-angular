@@ -21,9 +21,6 @@ import {Button} from "primeng/button";
     CommonModule,
     AuthRoutingModule,
     ReactiveFormsModule,
-    DividerModule,
-    InputTextModule,
-    Button
   ]
 })
 export class AuthModule { }

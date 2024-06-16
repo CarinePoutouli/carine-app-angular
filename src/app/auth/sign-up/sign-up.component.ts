@@ -24,10 +24,11 @@ export class SignUpComponent implements OnInit {
 
   OnSubmit() {
     let data = {
-      nom: this.form.value.nom,
-      prenom: this.form.value.prenom,
+      first_name: this.form.value.nom,
+      last_name: this.form.value.prenom,
       username: this.form.value.username,
       password: this.form.value.password,
+      telephone: this.form.value.telephone,
       email: this.form.value.email
     };
 

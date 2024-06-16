@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {provideHttpClient} from "@angular/common/http";
+import {provideHttpClient, withInterceptors} from "@angular/common/http";
+import {jwtInterceptor} from "./Service/intercepotor/jwt.interceptor";
 
 @NgModule({
   declarations: [
@@ -14,7 +14,11 @@ import {provideHttpClient} from "@angular/common/http";
     AppRoutingModule
   ],
   providers: [
-    provideHttpClient(),
+    provideHttpClient(
+      withInterceptors([
+        jwtInterceptor
+      ])
+    ),
   ],
   bootstrap: [AppComponent]
 })
