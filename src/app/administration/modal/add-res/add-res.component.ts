@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-add-res',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './add-res.component.css'
 })
 export class AddResComponent {
+  addResForm!: FormGroup;
 
+  onSubmit() {
+
+  }
 }

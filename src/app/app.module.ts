@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {provideHttpClient, withInterceptors} from "@angular/common/http";
 import {jwtInterceptor} from "./Service/intercepotor/jwt.interceptor";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import {jwtInterceptor} from "./Service/intercepotor/jwt.interceptor";
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideHttpClient(

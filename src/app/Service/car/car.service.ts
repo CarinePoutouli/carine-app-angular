@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {FormBuilder, Validators} from "@angular/forms";
+import {FormBuilder, FormControlName, Validators} from "@angular/forms";
 import {environment} from "../../../environments/environment";
 const BASE_URL = environment.APIURL+'api/';
 @Injectable({
@@ -13,15 +13,16 @@ export class CarService {
     private fb: FormBuilder
   ) { }
 
-  CarCreeateForm = this.fb.group({
+  CarCreeateForm() {
+    return this.fb.group({
 
-    model: ['', Validators.required],
-    description: ['', Validators.required],
-    price_per_day: ['', Validators.required],
-    image: [''],
-    created_by: [''],
-  });
-
+      model: ['', Validators.required],
+      description: ['', Validators.required],
+      price_per_day: ['', Validators.required],
+      image: [''],
+      created_by: [''],
+    });
+  }
   getAllCars() {
     return this.http.get(BASE_URL+'cars/');
   }
